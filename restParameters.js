@@ -1,3 +1,4 @@
+
 const functionWithRestParam = (someString, ...moreStrings) => {
     console.log(someString);
     if(moreStrings) {
