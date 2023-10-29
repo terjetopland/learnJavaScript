@@ -1,5 +1,5 @@
 // Typical example of using recursive function would be to make a factorial function.
-const factorialRecursive = (number, originalNumber=0, calculated=1) => {
+export const factorialRecursive = (number, originalNumber=0, calculated=1) => {
     if(originalNumber === 0) {
         originalNumber = number;
     }
@@ -26,7 +26,3 @@ const recursiveFunc = (stopAfterItteration, count=0) => {
 };
 
 
-
-factorialRecursive(5);
-
-recursiveFunc(20);
