@@ -6,10 +6,8 @@ const greetPureFunc = (name) => {
 
 
 // Inpure function
-
 // Create a variable
 let hello = `Hello`;
-
 // Create function
 const greetInpureFunc = (name) => {
     console.log(`${hello} ${name}`);
