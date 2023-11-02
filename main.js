@@ -1,3 +1,3 @@
-import { factorialRecursive } from "./utils/recursiveFunction.js";
+import { factorialRecursive } from "./conceptsJS/recursiveFunction.js";
 
 factorialRecursive(6);

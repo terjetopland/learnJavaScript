@@ -25,4 +25,10 @@ const recursiveFunc = (stopAfterItteration, count=0) => {
     
 };
 
+// TODO: Better Commments extension is added.
+//? This will make different colors...
+//! depending on what you write after //
+// * This is more important than...
+// this one
+
 
