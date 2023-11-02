@@ -16,7 +16,7 @@ function divide(number, divide) {
 function modolus(number, modolus) {
     return number % modolus;
 }
-function highOrderOperator( arrayOfNumbers, operatorFunction, aNumberToOperateOn ) {
+function higherOrderOperatorCalc( arrayOfNumbers, operatorFunction, aNumberToOperateOn ) {
     let result = [];
 
     for(const elem of arrayOfNumbers) {
@@ -33,7 +33,7 @@ function printOneByOneArray(someArray) {
 }
 
 const arrayOfNumbers = [1, 2, 3, 4, 5];
-const resultModolus = highOrderOperator(arrayOfNumbers, modolus, 4);
-const resultSubtract = highOrderOperator(arrayOfNumbers, subtract, 4);
+const resultModolus = higherOrderOperatorCalc(arrayOfNumbers, modolus, 4);
+const resultSubtract = higherOrderOperatorCalc(arrayOfNumbers, subtract, 4);
 printOneByOneArray(resultModolus);
 printOneByOneArray(resultSubtract);
