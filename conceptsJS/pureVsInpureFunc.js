@@ -5,7 +5,7 @@ const greetPureFunc = (name) => {
 };
 
 
-// Inpure function
+//* Inpure function
 // Create a variable
 let hello = `Hello`;
 // Create function
