@@ -15,3 +15,6 @@ let second = `second ${explenation}`;
 functionWithRestParam("Hello there", first, second );
 functionWithRestParam(10);
 functionWithRestParam(true);
+
+const test = functionWithRestParam(1, 2, 3, 4, 5 ,6)
+console.log(test)

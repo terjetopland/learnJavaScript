@@ -1,14 +1,18 @@
 console.log('Let us learn about object immutable Object');
 
-const user = {
+export const user = {
     'name': 'Per',
     'age': 99,
     'country': 'Norway'
 }
 
-user.name = 'Per Norway';
-user.age = '55';
-console.log(user);
+export const changeUser = (user, userName) => {
+    if(user) {
+        user.name = userName;
+    }
+}
+
+// console.log(user);
 
 
 Object.defineProperty(user, 'isAdmin', {
@@ -17,26 +21,26 @@ Object.defineProperty(user, 'isAdmin', {
     enumerable: true
 });
 
-console.log(user);
+// console.log(user);
 
 
 //* Now lets prevent extension:
-Object.preventExtensions(user);
+// Object.preventExtensions(user);
 
-user['phone'] = '9999999';
-console.log('Trying to mutate the userObject after preventExtensions:', user);
+//user['phone'] = '9999999';
+// console.log('Trying to mutate the userObject after preventExtensions:', user);
 
 
 //* Now lets seal:
-Object.seal(user);
-delete user.name;
-console.log('Trying to delete propperty "name" after sealing the object: ', user);
+// Object.seal(user);
+//delete user.name;
+// console.log('Trying to delete propperty "name" after sealing the object: ', user);
 // It's not possible after sealing it
 
 
 //* Now lets freeze:
-const frozenUserObject = Object.freeze(user);
-console.log('frozenUserObject', user);
+// const frozenUserObject = Object.freeze(user);
+// console.log('frozenUserObject', user);
 
 //? Why freeze?
 // Make it immutable

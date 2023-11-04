@@ -5,3 +5,7 @@
     const message = `I am invoked immediately after I was created`;
     console.log(message);
 })();
+
+(function helloAndre() {
+    console.log('Hello Andre');
+})();
