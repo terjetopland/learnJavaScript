@@ -12,8 +12,13 @@
 <body>
     <main>
         <h1 class="centerText"> Learn javaScript step by step</h1>
-        <section  id="yourSelf">
-            <div class="centerText">
+        <section  id="yourSelf" class="centerText">
+            <form id="formUserName">
+                <input id="userName" type="text" name="userName" placeholder="Firstname Lastname">
+                <button type="submit" onclick="formUserNameHandler(event)">Submit</button>
+                <div id="welcomeUser"></div>
+            </form>
+            <div>
                 <fieldset class="fieldsetRadioExpLevel">
                     <legend>At which level are <em>you</em> as a programmer?</legend>
                     <input id="beginner" type="radio" name="begginerIntermediateExperienced"> 
@@ -22,13 +27,14 @@
                         <label for="intermediate">Intermediate</label> 
                     <input id="experienced" type="radio" name="begginerIntermediateExperienced">
                         <label for="experienced">Experienced</label> 
+                    <button type="submit"></button>
                 </fieldset>
              </div>
             
         </section>
         <section>
             <h2 class="centerText">One step at a time</h2>
-            <div class="centerText">Starting with the concepts:</div>
+            <div id="startConcepts" class="centerText">Starting with the concepts:</div>
         </section>
     </main>
 </body>
