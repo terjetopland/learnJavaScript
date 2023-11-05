@@ -1,4 +1,4 @@
-console.log('Let us learn about object immutable Object');
+// console.log('Let us learn about object immutable Object');
 
 export const user = {
     'name': 'Per',

@@ -4,28 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type="module" src="./main.js"></script>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script type="module" src="./main.js"></script> <!--Script import-->
+    <link rel="stylesheet" type="text/css" href="./styles.css" /> <!--Stylesheet import-->
     <title>Learn javaScript</title>
 </head>
 
 <body>
     <main>
-        <h1 style="text-align: center"> Learn javaScript step by step</h1>
-        <section style="text-align: center" id="yourSelf">
-            At which level you think you are as a programmer?
-            <div>
-                <fieldset class="fieldsetRadio">
-                    <input type="radio" name="begginerIntermediateExperienced"> Beginner
-                    <input type="radio" name="begginerIntermediateExperienced"> Intermediate
-                    <input type="radio" name="begginerIntermediateExperienced"> Experienced
+        <h1 class="centerText"> Learn javaScript step by step</h1>
+        <section  id="yourSelf">
+            <div class="centerText">
+                <fieldset class="fieldsetRadioExpLevel">
+                    <legend>At which level are <em>you</em> as a programmer?</legend>
+                    <input id="beginner" type="radio" name="begginerIntermediateExperienced"> 
+                        <lablel for="beginner">Beginner</lablel>
+                    <input id="intermediate" type="radio" name="begginerIntermediateExperienced">
+                        <label for="intermediate">Intermediate</label> 
+                    <input id="experienced" type="radio" name="begginerIntermediateExperienced">
+                        <label for="experienced">Experienced</label> 
                 </fieldset>
              </div>
             
         </section>
         <section>
-            <h2 style="text-align: center;">One step at a time</h2>
-            <div style="text-align: center">Starting with the concepts:</div>
+            <h2 class="centerText">One step at a time</h2>
+            <div class="centerText">Starting with the concepts:</div>
         </section>
     </main>
 </body>

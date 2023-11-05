@@ -1,3 +1,7 @@
-.fieldsetRadio {
+.fieldsetRadioExpLevel {
     display: inline-block;
+}
+
+.centerText {
+    text-align: center;
 }
