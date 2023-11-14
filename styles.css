@@ -1,38 +1,45 @@
 body {
-    background: whitesmoke
+    /* background: rgba(113, 209, 34, 100%); */
+    background: whitesmoke;
+    margin: 20px;
+    color: whitesmoke;
 }
 .mainHeader {
-    background: linear-gradient(rgba(0, 0, 186, 70%), rgba(0, 0, 223, 70%),rgba(0, 0, 255, 70%));
+    background: linear-gradient( rgba(34, 200, 209, 0.8) 30%,rgba(42, 34, 209, 1) 70%, rgba(34, 113, 209, 0.7));
     margin: 0;
     padding: 10px;
-    color: whitesmoke;
 }
 
 .container {
     text-align: center;
 }
 
-.sectionJS {
-    background: linear-gradient(rgba(0, 0, 186, 70%), rgba(0, 0, 223, 70%),rgba(0, 0, 255, 70%));
-    box-shadow: 0 0 20px rgba(0, 0, 223, 60%);
+.oddSection {
+    background: linear-gradient(rgba(34, 113, 209, 0.7), rgba(209, 130, 34, 1),rgba(113, 209, 34, 0.7));
+    box-shadow: 0 10px 20px rgba(209, 130, 34, 0.6);
     color: whitesmoke;
 }
 
-.sectionCSS {
-    background: linear-gradient(rgba(0, 127, 186, 70%), rgba(0, 127, 223, 70%),rgba(0, 127, 255, 70%));
-    box-shadow: 0 0 20px rgba(0, 0, 223, 60%);
+.evenSection
+ {
+    background: linear-gradient(rgba(113, 209, 34, 0.7), rgba(209, 130, 34, 1), rgba(34, 113, 209, 0.7));
+    box-shadow: 0 10px 20px rgba(209, 130, 34, 0.6);
+}
+
+.evenSection, .oddSection {   
     margin: 10px;
+    padding: 20px;
+
 }
 
-.sectionJS, .sectionCSS {   
-    margin: auto;
-}
-
-.sectionCSS:hover, .sectionJS:hover{
+.evenSection:hover, .oddSection:hover{
     box-shadow: 0 0 0 ;
  }
  
 
+ .formUserName {
+    margin: 10px;
+ }
 .fieldsetRadioExpLevel {
     display: inline-block;
 }
