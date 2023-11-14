@@ -1,7 +1,39 @@
+body {
+    background: whitesmoke
+}
+.mainHeader {
+    background: linear-gradient(rgba(0, 0, 186, 70%), rgba(0, 0, 223, 70%),rgba(0, 0, 255, 70%));
+    margin: 0;
+    padding: 10px;
+    color: whitesmoke;
+}
+
+.container {
+    text-align: center;
+}
+
+.sectionJS {
+    background: linear-gradient(rgba(0, 0, 186, 70%), rgba(0, 0, 223, 70%),rgba(0, 0, 255, 70%));
+    box-shadow: 0 0 20px rgba(0, 0, 223, 60%);
+    color: whitesmoke;
+}
+
+.sectionCSS {
+    background: linear-gradient(rgba(0, 127, 186, 70%), rgba(0, 127, 223, 70%),rgba(0, 127, 255, 70%));
+    box-shadow: 0 0 20px rgba(0, 0, 223, 60%);
+    margin: 10px;
+}
+
+.sectionJS, .sectionCSS {   
+    margin: auto;
+}
+
+.sectionCSS:hover, .sectionJS:hover{
+    box-shadow: 0 0 0 ;
+ }
+ 
+
 .fieldsetRadioExpLevel {
     display: inline-block;
 }
 
-.centerText {
-    text-align: center;
-}

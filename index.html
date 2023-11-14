@@ -10,31 +10,38 @@
 </head>
 
 <body>
-    <main>
-        <h1 class="centerText"> Learn javaScript step by step</h1>
-        <section  id="yourSelf" class="centerText">
-            <form id="formUserName">
-                <input id="userName" type="text" name="userName" placeholder="Firstname Lastname">
-                <button type="submit" onclick="formUserNameHandler(event)">Submit</button>
-                <div id="welcomeUser"></div>
-            </form>
+    <main class="container">
+        <h1 class="mainHeader">Learn step by step:</h1>
+        <div class="sectionJS">
+            <h2>JavaScript</h1>
+            <div  id="yourSelf">
+                <form id="formUserName">
+                    <input id="userName" type="text" name="userName" placeholder="Firstname Lastname">
+                    <button type="submit" onclick="formUserNameHandler(event)">Submit</button>
+                    <div id="welcomeUser"></div>
+                </form>
+                <div>
+                    <fieldset class="fieldsetRadioExpLevel">
+                        <legend>At which level are <em>you</em> as a programmer?</legend>
+                        <input id="beginner" type="radio" name="begginerIntermediateExperienced"> 
+                            <lablel for="beginner">Beginner</lablel>
+                        <input id="intermediate" type="radio" name="begginerIntermediateExperienced">
+                            <label for="intermediate">Intermediate</label> 
+                        <input id="experienced" type="radio" name="begginerIntermediateExperienced">
+                            <label for="experienced">Experienced</label> 
+                    </fieldset>
+                </div>
+                
+            </div>
             <div>
-                <fieldset class="fieldsetRadioExpLevel">
-                    <legend>At which level are <em>you</em> as a programmer?</legend>
-                    <input id="beginner" type="radio" name="begginerIntermediateExperienced"> 
-                        <lablel for="beginner">Beginner</lablel>
-                    <input id="intermediate" type="radio" name="begginerIntermediateExperienced">
-                        <label for="intermediate">Intermediate</label> 
-                    <input id="experienced" type="radio" name="begginerIntermediateExperienced">
-                        <label for="experienced">Experienced</label> 
-                </fieldset>
-             </div>
-            
-        </section>
-        <section>
-            <h2 class="centerText">One step at a time</h2>
-            <div id="startConcepts" class="centerText">Starting with the concepts:</div>
-        </section>
+                <h3>One step at a time</h2>
+                <div id="startConcepts" >Starting with the concepts:</div>
+            </div>
+        </div>
+        <div class="sectionCSS">
+            <h2>CSS</h1>
+
+        </div>
     </main>
 </body>
 
