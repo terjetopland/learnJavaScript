@@ -9,4 +9,6 @@ The reason for choosing Javascript is based on the knowledge that this is used w
 
 ## Tanks to:
 Tapas Adhikary for lots of useful vidoes on Youtube.
+@CSwithNJ for good explenations on Youtube.
 freecodecamp.org for good paths for learning html, css and javascript.
+
