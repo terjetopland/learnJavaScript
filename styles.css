@@ -1,20 +1,84 @@
 body {
     background: whitesmoke;
+    margin: 0;
+    padding: 0;
     /* background: rgba(113, 209, 34, 0.1); */
-    margin: 15px;
-    color: whitesmoke;
 }
+
+.navBar {
+    margin-bottom: 30px;
+    padding-bottom: 5px;
+    min-height: 5vh;/* 10% of view height */
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid ;
+    box-shadow: 2px 2px 35px rgba(209, 130, 34, 1);
+}
+
+.logo {
+    padding: 5px;
+    align-self: center;
+}
+
+.navbar i {
+    color: rgba(113, 209, 34, 0.7);
+}
+
+.navBar .logo {
+    display: flex;
+}
+
+.navBar ul {
+    align-items: center;
+    list-style: none;
+    display: flex;
+}
+
+.navBar .menu a {
+    margin-right: 5ch;
+    text-decoration: none;
+    color: rgba(113, 209, 34, 1)
+}
+
+.navBar .menu a:hover {
+    color: black
+}
+
+
+.menu {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px;;
+    box-sizing: border-box;
+}
+
+.container {
+    text-align: center;
+    margin: 5px;
+}
+
 .mainHeader {
     background: linear-gradient( rgba(34, 200, 209, 0.8) 20%,rgba(42, 34, 209, 1) 70%, rgba(34, 113, 209, 0.7));
     box-shadow: -10px 10px 20px rgba(209, 130, 34, 0.6);
     margin: 0;
     padding: 10px;
+    color: whitesmoke;
 }
 
-.container {
-    text-align: center;
+.intro {
+
 }
 
+.firstPartIntro {
+    padding: 15px;
+    text-shadow: -5px 5px  10px;
+}
+
+.secondPartInro {
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+}
 .oddSection {
     background: linear-gradient(rgba(34, 113, 209, 0.7), rgba(209, 130, 34, 1),rgba(113, 209, 34, 0.7));
     box-shadow: -10px 10px 20px rgba(209, 130, 34, 0.6);
