@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/terjetopland/learnJavaScript#readme",
   "devDependencies": {
+    "htmlhint": "^1.1.4",
     "jest": "^29.7.0",
     "puppeteer": "^21.5.0"
   }

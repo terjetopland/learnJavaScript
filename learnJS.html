@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="./main.js"></script> <!--Script import-->
+    <script src="https://kit.fontawesome.com/85743e3a7a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="./styles.css" /> <!--Stylesheet import-->
+    <link rel="stylesheet" type="text/css" href="./navBarStyles.css">
+    <title>Learn javaScript</title>
+</head>
+
+<body>
+    <nav class="navBar">
+        <div class="logo"><i class="fa-solid fa-chalkboard-user fa-2x"></i><span>Keep learning</span></div>
+        <ul class="menu">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./learnJS.html">JS</a></li>
+            <li><a href="./learnCSS.html">CSS</a></li>
+            <li><a href="./learnHTML.html">HTML</a></li>
+        </ul>
+    </nav>
+    <main class="container">
+        <h1 class="mainHeader">JS step by step</h1>
+        <section class="intro">
+            <div class="firstPartIntro">In this section I will try to explain some basics of JS.</div>
+            <div class="secondPartInro">
+                Feel free to comment my approach and my solutions.
+            </div>
+        </section>
+        <section class="oddSection">
+            <h2>JavaScript</h2>
+            <div id="yourSelf">
+                <form id="formUserName" class="formUserName">
+                    <input id="userName" type="text" name="userName" placeholder="Firstname Lastname">
+                    <button type="submit" onclick="formUserNameHandler(event)">Submit</button>
+                    <div id="welcomeUser"></div>
+                </form>
+                <div>
+                    <fieldset class="fieldsetRadioExpLevel">
+                        <legend>At which level are <em>you</em> as a programmer?</legend>
+                        <input id="beginner" type="radio" name="begginerIntermediateExperienced">
+                        <lablel for="beginner">Beginner</lablel>
+                        <input id="intermediate" type="radio" name="begginerIntermediateExperienced">
+                        <label for="intermediate">Intermediate</label>
+                        <input id="experienced" type="radio" name="begginerIntermediateExperienced">
+                        <label for="experienced">Experienced</label>
+                    </fieldset>
+                </div>
+
+            </div>
+            <div>
+                
+            </div>
+        </section>
+        <section class="evenSection">
+            <h3 id="startConcepts">Starting with the concepts:</h3>
+        </section>
+        <div><a href="/index.html">Home</a></div>
+    </main>
+</body>
+
+</html>
