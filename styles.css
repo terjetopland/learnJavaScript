@@ -18,12 +18,11 @@ body {
 }
 
 .intro {
-
+    padding-bottom: 10px;
 }
-
 .firstPartIntro {
-    padding: 15px;
     text-shadow: -5px 5px  10px;
+    margin: 15px;
 }
 
 .secondPartInro {
@@ -44,12 +43,18 @@ body {
     color: rgb(245, 245, 245);
 }
 
-.evenSection, .oddSection {   
+.midSection {
+    background: linear-gradient(rgba(113, 209, 34, 0.7), rgba(209, 130, 34, 1), rgba(113, 209, 34, 0.7));
+    box-shadow: -10px 10px 20px rgba(209, 130, 34, 0.6);
+    color: rgb(245, 245, 245);
+}
+
+.evenSection, .oddSection, .midSection {   
     margin: 10px;
     padding: 20px;
 }
 
-.evenSection:hover, .oddSection:hover{
+.evenSection:hover, .oddSection:hover, .midSection:hover{
     box-shadow: 0 0 0 ;
     color: black;
     border: 3px solid rgba(255, 255, 255, 0.7)
@@ -58,6 +63,7 @@ body {
  .formUserName {
     margin: 10px;
  }
+ 
 .fieldsetRadioExpLevel {
     display: inline-block;
 }
@@ -68,3 +74,6 @@ body {
     margin-right: auto;
 }
 
+.removeLinkDefaultStyle {
+    text-decoration: none;
+}
