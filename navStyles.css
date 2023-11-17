@@ -2,9 +2,7 @@
     margin-bottom: 35px;
     padding-bottom: 5px;
     min-height: 5vh;
-    /* 10% of view height */
     display: flex;
-    justify-content: space-between;
     border-bottom: 1px solid rgba(113, 209, 34, 0.9);
     box-shadow: 2px 2px 15px rgba(113, 209, 34, 0.9);
     background: rgb(245, 245, 245);
@@ -36,33 +34,36 @@
 }
 
 .navBar ul {
-    align-items: center;
-    list-style: none;
-    display: flex;
+    padding: 10px;
+    list-style: none; 
+    display: flex; 
+    flex-wrap: wrap;
+}
+
+.navBar ul a {
+    padding-left: 10px;
 }
 
 .navBar .menu a {
     margin-right: 5ch;
+}
+
+.navBar .menu a , .backArrow{
     text-decoration: none;
     color: rgba(34, 113, 209, 0.7);
 }
 
-.navBar .menu a:visited {
+.navBar .menu a:visited, .backArrow:visited {
     color: rgba(113, 209, 34, 1)
 }
 
-.navBar .menu a:active {
+.navBar .menu a:active, .backArrow:active {
     color: rgba(209, 130, 34, 1);
 }
 
 
-.navBar .menu a:hover {
+.navBar .menu a:hover, .backArrow:hover {
     color: rgba(209, 130, 34, 1)
 }
 
-.menu {
-    margin-right: auto;
-    margin-left: auto;
-    padding: 0px;
-    box-sizing: border-box;
-}
+
