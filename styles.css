@@ -2,12 +2,12 @@ body {
     background: rgb(245, 245, 245);
     margin: 0;
     padding: 0;
-    /* background: rgba(113, 209, 34, 0.1); */
 }
 
 .container {
     text-align: center;
     margin: 5px;
+    overflow-x: hidden;
 }
 
 .mainHeader {
@@ -26,7 +26,7 @@ body {
 }
 
 .secondPartInro {
-    max-width: 600px;
+    max-width: 100%;
     margin-right: auto;
     margin-left: auto;
 }
@@ -69,7 +69,7 @@ body {
 }
 
 .boxOfTextContent {
-    max-width: 500px;
+    max-width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
