@@ -4,5 +4,3 @@ document.getElementById('formUserName').addEventListener('submit', (eventObject)
     eventObject.preventDefault(); // Prevents refreshing...
     formUserNameHandler(eventObject);
 } )
-
-const backNav = document.querySelector('backArrow');
