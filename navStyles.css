@@ -4,6 +4,7 @@
     align-items: center;
     height: 80px;
     width: 100%;
+    margin-bottom: 15px;
     border-bottom: 1px solid rgba(113, 209, 34, 0.9);
     box-shadow: 2px 2px 15px rgba(113, 209, 34, 0.9);
     background: rgb(245, 245, 245);
@@ -32,8 +33,10 @@
 
 .navBar .checkBtn {
     font-size: 30px;
+    background: rgb(245, 245, 245);
     color: rgba(34, 113, 209, 0.7);
     margin: 20px;
+    border: none;
     cursor: pointer;
     display: none;
 }
@@ -53,14 +56,25 @@
         min-width: 150px;
         height: 100vh;
         margin-right: 0;
-        background: rgb(245, 245, 245);
+        background: rgba(245, 245, 245, 0.85);
         top: 62px;
         right: -100%;
         text-align: left;
-        transition: right 0.3s ease;
+        transition: all 0.5s ease;
     }
 
     .navBar .menu li {
         display: block;
+        margin-bottom: 10px;
+    }
+
+    /* make the color a bit stronger since the background is a bit transparent*/
+    .navBar .menu li a {
+        color: rgba(34, 113, 209, 1);
     }
 }
+
+.navBar .checkBtn:active {
+    color: rgba(209, 130, 34, 1);
+}
+
