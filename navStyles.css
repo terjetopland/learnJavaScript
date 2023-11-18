@@ -42,20 +42,22 @@
     display: none;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 440px) {
     .navBar .checkBtn {
         display: block;
     }
 
     .navBar .menu {
         position: fixed;
-        width: 100%;
+        width: 20%;
+        min-width: 150px;
         height: 100vh;
+        margin-right: 0;
         background: rgb(245, 245, 245);
-        top: 80px;
-        left: -100%;
-        transition: all .5s;
-        text-align: center;
+        top: 62px;
+        right: -100%;
+        text-align: left;
+        transition: right 0.3s ease;
     }
 
     .navBar .menu li {
