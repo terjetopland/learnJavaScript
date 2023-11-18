@@ -1,69 +1,80 @@
 .navBar {
-    margin-bottom: 35px;
-    padding-bottom: 5px;
-    min-height: 5vh;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    margin-bottom: 15px;
     border-bottom: 1px solid rgba(113, 209, 34, 0.9);
     box-shadow: 2px 2px 15px rgba(113, 209, 34, 0.9);
     background: rgb(245, 245, 245);
 }
-
-.logo {
-    padding: 10px;
-    align-self: center;
-    align-items: center;
-    color: rgba(209, 130, 34, 1);
-}
-
-.logo i {
-    padding: 5px;
-}
-
-.logo span {
-    padding-left: 5px;
-    text-shadow: -5px 5px 10px;
-}
-
-.navbar i {
-    color: rgba(113, 209, 34, 0.7);
-    
-}
-
 .navBar .logo {
-    display: flex;
-}
-
-.navBar ul {
-    padding: 10px;
-    list-style: none; 
-    display: flex; 
-    flex-wrap: wrap;
-}
-
-.navBar ul a {
-    padding-left: 10px;
-}
-
-.navBar .menu a {
-    margin-right: 5ch;
-}
-
-.navBar .menu a , .backArrow{
-    text-decoration: none;
-    color: rgba(34, 113, 209, 0.7);
-}
-
-.navBar .menu a:visited, .backArrow:visited {
-    color: rgba(113, 209, 34, 1)
-}
-
-.navBar .menu a:active, .backArrow:active {
+    margin-left: 10px;
+    font-size: 20px;
+    font-weight: bold;
     color: rgba(209, 130, 34, 1);
 }
 
-
-.navBar .menu a:hover, .backArrow:hover {
-    color: rgba(209, 130, 34, 1)
+.navBar .menu{
+    margin-right: 20px;
 }
 
+.navBar .menu li {
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.navBar .menu li a {
+    color: rgba(34, 113, 209, 0.7);
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.navBar .checkBtn {
+    font-size: 30px;
+    background: rgb(245, 245, 245);
+    color: rgba(34, 113, 209, 0.7);
+    margin: 20px;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 440px) {
+    .navBar .checkBtn {
+        display: block;
+    }
+
+    .navBar .menu {
+        position: fixed;
+        width: 20%;
+        min-width: 150px;
+        height: 100vh;
+        margin-right: 0;
+        background: rgba(245, 245, 245, 0.85);
+        top: 62px;
+        right: -100%;
+        text-align: left;
+        transition: all 0.5s ease;
+    }
+
+    .navBar .menu li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    /* make the color a bit stronger since the background is a bit transparent*/
+    .navBar .menu li a {
+        color: rgba(34, 113, 209, 1);
+    }
+}
+
+.navBar .checkBtn:active {
+    color: rgba(209, 130, 34, 1);
+}
 
