@@ -1,4 +1,5 @@
 .navBar {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,6 +10,7 @@
     box-shadow: 2px 2px 15px rgba(113, 209, 34, 0.9);
     background: rgb(245, 245, 245);
 }
+
 .navBar .logo {
     margin-left: 10px;
     font-size: 20px;
@@ -16,16 +18,25 @@
     color: rgba(209, 130, 34, 1);
 }
 
-.navBar .menu{
+.navBar .menu {
     margin-right: 20px;
 }
 
-.navBar .menu li {
+.backgroundNav {
+    position: absolute;
+    top: 16px;
+    right: 28vh;
+    font-size: 17px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.navBar .menu .layerContainer {
     display: inline-block;
     margin: 0 5px;
 }
 
-.navBar .menu li a {
+.navBar .menu .layerContainer a {
     color: rgba(34, 113, 209, 0.7);
     font-size: 17px;
     text-transform: uppercase;
@@ -43,6 +54,17 @@
 
 #check {
     display: none;
+}
+
+@media (min-width: 441px) {
+    .navBar .menu li:hover+.backgroundNav,
+    .backgroundNav:hover {
+        color: rgba(34, 113, 209, 0.7);
+        opacity: 1;
+        font-size: 40px;
+        transition: 4s;
+    }
+
 }
 
 @media (max-width: 440px) {
@@ -63,7 +85,7 @@
         transition: all 0.5s ease;
     }
 
-    .navBar .menu li {
+    .navBar .menu .layerContainer {
         display: block;
         margin-bottom: 10px;
     }
@@ -78,3 +100,55 @@
     color: rgba(209, 130, 34, 1);
 }
 
+.backArrowContainer {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    height: 60px;
+    width: 50px;
+}
+
+.backArrow,
+.home {
+    color: rgba(34, 113, 209, 0.7);
+}
+
+.backArrow:hover,
+.backArrow:active {
+    color: rgba(209, 130, 34, 1);
+    transition-duration: 1s;
+}
+
+@keyframes skeHome {
+    0% {
+        transform: skewY(0deg) scaleY(100%);
+        color: rgba(34, 113, 209, 0.7);
+    }
+
+    25% {
+        transform: skewY(20deg) scaleY(0%);
+        opacity: 0.3;
+    }
+
+    50% {
+        transform: skewY(0deg) scaleY(100%);
+        color: rgba(34, 113, 209, 0.7)
+    }
+
+    75% {
+        transform: skewY(-20deg) scaleY(0%);
+        opacity: 0.3;
+    }
+}
+
+.backArrow:hover+.home {
+    color: rgba(209, 130, 34, 1);
+    transition-duration: 1s;
+    animation-name: skeHome;
+    animation-delay: 2s;
+    animation-duration: 5s;
+    animation-iteration-count: 2;
+    animation-timing-function: linear;
+
+}
