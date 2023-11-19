@@ -15,10 +15,22 @@
     <nav class="navBar">
         <div class="logo"><i class="fa-solid fa-chalkboard-user fa-2x"></i><span>Keep learning</span></div>
         <ul class="menu">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./learnJS.html">JS</a></li>
-            <li><a href="./learnCSS.html">CSS</a></li>
-            <li><a href="./learnHTML.html">HTML</a></li>
+            <div class="layerContainer">
+                <li ><a href="./index.html">Home</a></li>
+                <li class="backgroundNav">Home</li>
+            </div>
+            <div class="layerContainer">
+                <li class="levelOne"><a href="./index.html">JS</a></li>
+                <li class="levelTwo backgroundNav">JS</li>
+            </div>
+            <div class="layerContainer">
+                <li class="levelOne"><a href="./index.html">CSS</a></li>
+                <li class="levelTwo backgroundNav">CSS</li>
+            </div>
+            <div class="layerContainer">
+                <li class="levelOne"><a href="./index.html">Html</a></li>
+                <li class="levelTwo backgroundNav">Html</li>
+            </div>
         </ul>
         <button id="menuButton" class="checkBtn">
             <i class="fas fa-bars"></i>
@@ -60,7 +72,12 @@
         <section class="evenSection">
             <h3 id="startConcepts">Starting with the concepts:</h3>
         </section>
-        <div><a href="/index.html"><i class="fa-regular fa-circle-left fa-2x backArrow"></i></a></div>
+        <div class="backArrowContainer">
+            <div class="backArrow">
+                <a href="/index.html"><i class="fa-regular fa-circle-left fa-2x backArrow"></i></a>
+            </div>
+            <div class="home">Home</div>
+        </div>
     </main>
 </body>
 

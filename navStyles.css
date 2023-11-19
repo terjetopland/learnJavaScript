@@ -1,4 +1,5 @@
 .navBar {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -9,6 +10,7 @@
     box-shadow: 2px 2px 15px rgba(113, 209, 34, 0.9);
     background: rgb(245, 245, 245);
 }
+
 .navBar .logo {
     margin-left: 10px;
     font-size: 20px;
@@ -16,19 +18,58 @@
     color: rgba(209, 130, 34, 1);
 }
 
-.navBar .menu{
+.navBar .menu {
     margin-right: 20px;
 }
 
-.navBar .menu li {
+.backgroundNav {
+    position: absolute;
+    top: 17px;
+    right: 26vw; 
+    font-size: 17px;
+    color: rgba(209, 130, 34, 0.7);
+    cursor: pointer;
+    opacity: 0;
+}
+
+.navBar .menu .layerContainer {
     display: inline-block;
     margin: 0 5px;
 }
 
-.navBar .menu li a {
+.navBar .menu .layerContainer a {
     color: rgba(34, 113, 209, 0.7);
     font-size: 17px;
     text-transform: uppercase;
+}
+
+.navBar .menu .layerContainer a:hover, :active {
+    color: rgba(209, 130, 34, 1);
+    font-size: 20px;
+    transition: 0.4s;
+}
+
+@media (min-width: 1000px) {
+    .navBar .menu li:hover+.backgroundNav {
+        animation-name: slideInBackgroundNav;
+        animation-duration: 3s;
+        animation-delay: 1s;
+        animation-iteration-count: 2;
+        animation-direction: alternate;
+    }
+}
+@keyframes slideInBackgroundNav {
+    from {
+        transform: rotate(360deg);
+        opacity: 0;
+        font-size: 17px;
+    }
+    to {
+        transform: rotate(0);
+        color: rgba(34, 113, 209, 0.7);
+        opacity: 1;
+        font-size: 25vw;
+    }  
 }
 
 .navBar .checkBtn {
@@ -41,11 +82,8 @@
     display: none;
 }
 
-#check {
-    display: none;
-}
-
-@media (max-width: 440px) {
+/* Make hamburgermenu if it under a certain screen width */
+@media (max-width: 560px) {
     .navBar .checkBtn {
         display: block;
     }
@@ -63,7 +101,7 @@
         transition: all 0.5s ease;
     }
 
-    .navBar .menu li {
+    .navBar .menu .layerContainer {
         display: block;
         margin-bottom: 10px;
     }
@@ -78,3 +116,55 @@
     color: rgba(209, 130, 34, 1);
 }
 
+.backArrowContainer {
+    display: flex;
+    flex-direction: column;
+    margin-right: auto;
+    margin-left: auto;
+    height: 80px;
+    width: 80px;
+}
+
+.backArrow,
+.home {
+    color: rgba(34, 113, 209, 0.7);
+}
+
+.backArrow:hover,
+.backArrow:active {
+    color: rgba(209, 130, 34, 1);
+    transition-duration: 1s;
+}
+
+@keyframes skeHome {
+    0% {
+        transform: skewY(0deg) scaleY(100%);
+        color: rgba(34, 113, 209, 0.7);
+    }
+
+    25% {
+        transform: skewY(20deg) scaleY(0%) rotate(360deg);
+        opacity: 0.0;
+    }
+
+    50% {
+        transform: skewY(0deg) scaleY(100%);
+        color: rgba(34, 113, 209, 0.7)
+    }
+
+    75% {
+        transform: skewY(-20deg) scaleY(0%) rotate(360deg);
+        opacity: 0.0;
+    }
+}
+
+.backArrow:hover+.home {
+    color: rgba(209, 130, 34, 1);
+    transition-duration: 1s;
+    animation-name: skeHome;
+    animation-delay: 1s;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+
+}
