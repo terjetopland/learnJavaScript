@@ -43,7 +43,7 @@
     text-transform: uppercase;
 }
 
-.navBar .menu .layerContainer a:hover, :active {
+.navBar .menu .layerContainer a:hover {
     color: rgba(209, 130, 34, 1);
     font-size: 20px;
     transition: 0.4s;
