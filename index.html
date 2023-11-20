@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script defer src="https://kit.fontawesome.com/85743e3a7a.js" crossorigin="anonymous"></script> <!--Impor this one first to make navbar come first-->
+    <script defer src="https://kit.fontawesome.com/85743e3a7a.js" crossorigin="anonymous"></script>
+    <!--Impor this one first to make navbar come first-->
     <script defer type="module" src="./main.js"></script> <!--then the rest of the page-->
     <link rel="stylesheet" type="text/css" href="./styles.css" /> <!--Stylesheet import-->
     <link rel="stylesheet" type="text/css" href="./navStyles.css">
@@ -16,19 +17,19 @@
         <div class="logo"><i class="fa-solid fa-chalkboard-user fa-2x"></i><span>Keep learning</span></div>
         <ul class="menu">
             <div class="layerContainer">
-                <li ><a href="./index.html">Home</a></li>
+                <li><a href="./index.html">Home</a></li>
                 <li class="backgroundNav">Home</li>
             </div>
             <div class="layerContainer">
-                <li class="levelOne"><a href="./index.html">JS</a></li>
+                <li class="levelOne"><a href="./learnJS.html">JS</a></li>
                 <li class="levelTwo backgroundNav">JS</li>
             </div>
             <div class="layerContainer">
-                <li class="levelOne"><a href="./index.html">CSS</a></li>
+                <li class="levelOne"><a href="./learnCSS.html">CSS</a></li>
                 <li class="levelTwo backgroundNav">CSS</li>
             </div>
             <div class="layerContainer">
-                <li class="levelOne"><a href="./index.html">Html</a></li>
+                <li class="levelOne"><a href="./learnHTML.html">Html</a></li>
                 <li class="levelTwo backgroundNav">Html</li>
             </div>
         </ul>
@@ -48,21 +49,24 @@
                 - and you can refactor and change along the way.
             </div>
         </section>
-        <a href="/learnJS.html" class="removeLinkDefaultStyle">
-            <section class="oddSection">
+        <section class="oddSection">
+            <div class="forwardArrowContainer">
                 <h2>JavaScript</h2>
-            </section>
-        </a>
-        <a href="/learnCSS.html" class="removeLinkDefaultStyle">
-            <section class="midSection">
+                <a href="/learnJS.html"><i class="fa-regular fa-circle-right fa-2x forwardArrow"></i></a>
+            </div>
+        </section>
+        <section class="midSection">
+            <div class="forwardArrowContainer">
                 <h2>CSS</h2>
-            </section>
-        </a>
-        <a href="/learnHTML.html" class="removeLinkDefaultStyle">
-            <section class="evenSection">
+                <a href="/learnCSS.html"><i class="fa-regular fa-circle-right fa-2x forwardArrow"></i></a>
+            </div>
+        </section>
+        <section class="evenSection">
+            <div class="forwardArrowContainer">
                 <h2>HTML</h2>
-            </section>
-        </a>
+                <a href="/learnHTML.html"><i class="fa-regular fa-circle-right fa-2x forwardArrow"></i></a>
+            </div>
+        </section>
     </main>
 </body>
 

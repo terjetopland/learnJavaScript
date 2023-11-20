@@ -25,7 +25,8 @@
 .backgroundNav {
     position: absolute;
     top: 17px;
-    right: 26vw; 
+    right: 50%;
+    transform: translateX(-50%);
     font-size: 17px;
     color: rgba(209, 130, 34, 0.7);
     cursor: pointer;
@@ -43,7 +44,7 @@
     text-transform: uppercase;
 }
 
-.navBar .menu .layerContainer a:hover, :active {
+.navBar .menu .layerContainer a:hover {
     color: rgba(209, 130, 34, 1);
     font-size: 20px;
     transition: 0.4s;
@@ -58,18 +59,21 @@
         animation-direction: alternate;
     }
 }
+
 @keyframes slideInBackgroundNav {
     from {
         transform: rotate(360deg);
         opacity: 0;
         font-size: 17px;
     }
+
     to {
-        transform: rotate(0);
+        transform: rotate(0) translateX(50%);
         color: rgba(34, 113, 209, 0.7);
         opacity: 1;
         font-size: 25vw;
-    }  
+        right: 50%;
+    }
 }
 
 .navBar .checkBtn {
@@ -125,9 +129,61 @@
     width: 80px;
 }
 
+.forwardArrowContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.forwardArrow {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity .5s;
+}
+
+.forwardArrow,
 .backArrow,
 .home {
     color: rgba(34, 113, 209, 0.7);
+}
+
+.forwardArrowContainer:hover .forwardArrow {
+    opacity: 0.4;
+}
+
+.forwardArrow:hover {
+    opacity: 1 !important;
+}
+
+@media (min-width: 1000px) {
+    .forwardArrowContainer:hover .forwardArrow {
+        animation-name: slidingArrow;
+        animation-duration: 5s;
+        animation-delay: 5s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes slidingArrow {
+    0% {}
+
+    50% {
+        right: 75%;
+    }
+
+    100% {
+        right: 56%;
+    }
+}
+
+@media (max-width: 560px) {
+    .forwardArrow {
+        opacity: 0.4;
+    }
 }
 
 .backArrow:hover,
@@ -160,7 +216,7 @@
 
 .backArrow:hover+.home {
     color: rgba(209, 130, 34, 1);
-    transition-duration: 1s;
+    transition-duration: 5s;
     animation-name: skeHome;
     animation-delay: 1s;
     animation-duration: 3s;
