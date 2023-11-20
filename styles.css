@@ -1,4 +1,5 @@
 @import "/navStyles.css";
+@import "flipCard.css";
 
 * {
     box-sizing: border-box;
