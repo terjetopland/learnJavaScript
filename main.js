@@ -9,6 +9,7 @@ if (formUserName) {
     })
 }
 
+// some styling isn't to easy to solve with plain css. Hence this is provided.
 document.addEventListener('DOMContentLoaded', () => {
     let menuButton = document.getElementById('menuButton');
     let menu = document.querySelector('.navBar .menu');

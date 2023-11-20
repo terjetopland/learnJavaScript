@@ -1,3 +1,5 @@
+@import "/navStyles.css";
+
 * {
     box-sizing: border-box;
     text-decoration: none;
@@ -66,7 +68,7 @@ body {
     color: black;
     border: 3px solid rgba(255, 255, 255, 0.7)
  }
- 
+
  .formUserName {
     margin: 10px;
  }
