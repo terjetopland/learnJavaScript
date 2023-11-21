@@ -162,7 +162,7 @@
     .forwardArrowContainer:hover .forwardArrow {
         animation-name: slidingArrow;
         animation-duration: 5s;
-        animation-delay: 5s;
+        animation-delay: 3s;
         animation-fill-mode: forwards;
     }
 }

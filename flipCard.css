@@ -45,16 +45,30 @@
     transform: rotateX(180deg);
 }
 
+.flipGame {
 
-.secondCard, .thirdCard, .firstCard {
-    cursor: pointer;
 }
 
-.firstCard {
-    opacity: 1;
-    transition: opacity 3s;
-}
-.secondCard, .thirdCard {
+.firstCard, .secondCard, .thirdCard {
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none; /* IE 10 and IE 11 */
     opacity: 0;
     transition: opacity 3s;
 }
+
+.scoreBox {
+    display: inline;
+    border: 2px solid rgba(0, 0, 0);
+    height: 70px;
+    width: 120px;
+}
+
+.scoreboardHeading {
+    margin: 0;
+}
+
+.timer, .score {
+    text-align:left;
+}
+
