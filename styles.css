@@ -18,6 +18,7 @@ body {
     text-align: center;
     margin: 5px;
     overflow-x: hidden;
+    max-width: 100%;
 }
 
 .mainHeader {
@@ -60,7 +61,7 @@ body {
 }
 
 .evenSection, .oddSection, .midSection {   
-    margin: 10px;
+    margin: 10px auto;
     padding: 20px;
 }
 

@@ -1,8 +1,10 @@
 .flipCard {
     background-color: transparent;
+    max-width: 100%;
     width: 200px;
     height: 300px;
     perspective: 800px;
+    margin: 20px auto;
 }
 
 .flipCardInnerContainer {
@@ -15,7 +17,7 @@
 }
 
 .flipCard:hover .flipCardInnerContainer {
-    transform: rotateY(180deg);
+    transform: rotateX(180deg);
 }
 
 .flipCardFront, .flipCardBack {
@@ -25,13 +27,15 @@
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border: 1px solid rgba(0, 0, 0);
+    box-shadow: -10px 10px 20px rgba(209, 130, 34, 0.6);
 }
 
 .flipCardFront {
-    
+
 }
 
+
 .flipCardBack {
-    transform: rotateY(180deg);
+    transform: rotateX(180deg) ;
 }
 
