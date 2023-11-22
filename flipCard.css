@@ -56,6 +56,12 @@
     transition: opacity 3s;
 }
 
+.scoreContainer {
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+}
+
 .scoreBox {
     display: flex;
     flex-direction: column;
@@ -99,6 +105,9 @@
     cursor: pointer;
 }
 
+.startFlipcardGameBtn:disabled {
+    background: gainsboro;
+}
 .startFlipcardGameBtn:hover {
     background: rgba(209, 130, 34, 1);
 }
@@ -106,9 +115,10 @@
 .countDownStartTimer {
     color: rgba(34, 113, 209, 1);
     font-size: 30px;
-    top: 50vw;
-    right: 50vw;
-    position: absolute;
+    margin-right: auto;
+    margin-left: auto;
+    /* position: absolute; */
     opacity: 0;
-    transition: opacity 0.5s;
+    /* transition: opacity 0.5s; */
 }
+
