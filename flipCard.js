@@ -4,9 +4,12 @@ export const flipCardInOrder = () => {
         let firstCard = document.getElementById('firstCard');
         let secondCard = document.getElementById('secondCard');
         let thirdCard = document.getElementById('thirdCard');
-        let scoreStats = document.getElementById('score')
+        let scoreStats = document.getElementById('score');
+        
         // initialize the cards with opacity 0
         let count = 0;
+
+        countDownToStart();
         if (firstCard && secondCard && thirdCard) {
             firstCard.style.opacity = '1';
             firstCard.style.cursor = 'pointer';
@@ -54,7 +57,7 @@ export const flipCardInOrder = () => {
 
                         count++
                         scoreStats.textContent = `Score: ${count}`
-                        
+
                         let frontText = firstCard.querySelector('.flipCardFront > div');
                         frontText.textContent = `You found me again!\nCount: ${count}`;
 
@@ -66,4 +69,28 @@ export const flipCardInOrder = () => {
 
         } else { return console.log('Missing one or more flipCards: firstCard? secondCard? ThirdCard?');}
     });
+}
+
+const countDownToStart = () => {
+    let countDownSecondsNow = new Date().getSeconds() + 5;
+    let startFlipcardGameBtn = document.getElementById('startFlipcardGameBtn');
+    let countDownStartTimer = document.getElementById('countDownStartTimer');
+
+    console.log('here')
+    const countDown = (timeBeforeStop) => {
+        let timeNow = new Date().getSeconds();
+            timeNow = new Date().getSeconds();
+            console.log(timeBeforeStop - timeNow)
+            return timeBeforeStop - timeNow;  
+    }
+
+    
+        startFlipcardGameBtn.addEventListener('click', () => {
+            
+            countDownStartTimer.textContent =
+            countDownStartTimer.style.opacity = '1';
+            countDownStartTimer.textContent = `${countDown(countDownSecondsNow)}`
+        })
+    
+    
 }

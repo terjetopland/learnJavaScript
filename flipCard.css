@@ -1,4 +1,3 @@
-
 .flipContainer {
     display: flex;
     position: relative;
@@ -26,7 +25,8 @@
     transform: rotateX(180deg);
 }
 
-.flipCardFront, .flipCardBack {
+.flipCardFront,
+.flipCardBack {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -36,39 +36,79 @@
     box-shadow: -10px 10px 20px rgba(209, 130, 34, 0.6);
 }
 
-.flipCardFront {
-
-}
+.flipCardFront {}
 
 
 .flipCardBack {
     transform: rotateX(180deg);
 }
 
-.flipGame {
+.flipGame {}
 
-}
-
-.firstCard, .secondCard, .thirdCard {
+.firstCard,
+.secondCard,
+.thirdCard {
     user-select: none;
     -webkit-user-select: none;
-    -ms-user-select: none; /* IE 10 and IE 11 */
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
     opacity: 0;
     transition: opacity 3s;
 }
 
 .scoreBox {
-    display: inline;
-    border: 2px solid rgba(0, 0, 0);
-    height: 70px;
+    display: flex;
+    flex-direction: column;
+    height: 120px;
     width: 120px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+.coloredBorder {
+    border: 2px solid;
+    border-image-source: linear-gradient(rgba(113, 209, 34, 0.7), rgba(209, 130, 34, 1), rgba(113, 209, 34, 0.7));
+    border-image-slice: 1;
+    border-width: 3px;
 }
 
 .scoreboardHeading {
     margin: 0;
+    margin-bottom: 5px auto;
+
 }
 
-.timer, .score {
-    text-align:left;
+.timer,
+.score {
+    text-align: left;
+    margin-left: 2px;
+    margin-bottom: 2px;
+    border-bottom: 1px dashed rgba(0, 0, 0);
 }
 
+.startFlipcardGameBtn {
+    background: rgba(34, 113, 209, 0.7);
+    border: 5px solid whitesmoke;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.startFlipcardGameBtn:hover {
+    background: rgba(209, 130, 34, 1);
+}
+
+.countDownStartTimer {
+    color: rgba(34, 113, 209, 1);
+    font-size: 30px;
+    top: 50vw;
+    right: 50vw;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s;
+}

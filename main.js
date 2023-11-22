@@ -13,6 +13,8 @@ if (formUserName) {
 // It's to make the cards disappear and have clickable event.
 flipCardInOrder();
 
+
+
 // some styling isn't to easy to solve with plain css. Hence this is provided.
 document.addEventListener('DOMContentLoaded', () => {
     let menuButton = document.getElementById('menuButton');
