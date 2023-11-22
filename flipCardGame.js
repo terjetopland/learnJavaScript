@@ -8,6 +8,7 @@ export const flipCardInOrder = () => {
         let secondCard = document.getElementById('secondCard');
         let thirdCard = document.getElementById('thirdCard');
         let scoreStats = document.getElementById('score');
+        let congratsElement = document.querySelector('.congrats');
 
         let timeOfGame = 10;
         let countDownStart = 3;
@@ -133,6 +134,7 @@ export const flipCardInOrder = () => {
                 timerElement.textContent = `Timer: 0`;
                 startFlipcardGameBtn.disabled = false;
                 cb();
+                congratsElement.classList.add('congratsAfter');
             }
             countEnd--;
         }, 1000);

@@ -1,5 +1,5 @@
 import { formUserNameHandler } from "./javaScriptFunctions/split.js";
-import { flipCardInOrder } from "./flipCard.js";
+import { flipCardInOrder } from "./flipCardGame.js";
 
 const formUserName = document.getElementById('formUserName');
 
