@@ -1,36 +1,37 @@
 export const flipCardInOrder = () => {
+    
+    let countScore = 0;
 
     document.addEventListener('DOMContentLoaded', () => {
         let startFlipcardGameBtn = document.getElementById('startFlipcardGameBtn');
         let firstCard = document.getElementById('firstCard');
         let secondCard = document.getElementById('secondCard');
         let thirdCard = document.getElementById('thirdCard');
+        let scoreStats = document.getElementById('score');
 
-        if(firstCard) {
+        let timeOfGame = 10;
+        let countDownStart = 3;
+        let countDownFinished = false;
+
+        const resetScore = () => {
+            countDownFinished = false;
+            countScore = 0;
+            scoreStats.textContent = `Score: ${countScore}`;
+        };
+
+        const resetFinished = () => {
+            countDownFinished = false;
+        }
+
+        if (firstCard) {
             firstCard.style.opacity = '1';
             firstCard.style.cursor = 'pointer';
         }
 
-
         startFlipcardGameBtn.addEventListener('click', () => {
+            console.time();
 
-            
-            let scoreStats = document.getElementById('score');
-            // let startFlipcardGameBtn = document.getElementById('startFlipcardGameBtn');
-
-            // initialize the cards with opacity 0
-            let countScore = 0;
-            let countDownFinished = false;
-            let gameEnded = false;
-
-            const resetScore = () => {
-                countScore = 0;
-                scoreStats.textContent = `Score: ${countScore}`;
-            };
-            const resetFinished = () => {
-                countDownFinished = false;
-            }
-
+            resetScore();
 
             if (firstCard && secondCard && thirdCard) {
                 firstCard.style.opacity = '1';
@@ -49,7 +50,6 @@ export const flipCardInOrder = () => {
                             if (countDownFinished) {
                                 scoreStats.textContent = `Score: ${++countScore}`
                             }
-
                         }
                     });
 
@@ -65,7 +65,6 @@ export const flipCardInOrder = () => {
                             if (countDownFinished) {
                                 scoreStats.textContent = `Score: ${++countScore}`
                             }
-
                         }
                     });
                 }
@@ -82,20 +81,17 @@ export const flipCardInOrder = () => {
                                 scoreStats.textContent = `Score: ${++countScore}`
                             }
 
-
                             let frontText = firstCard.querySelector('.flipCardFront > div');
                             frontText.textContent = `You found me again!\nCount: ${countScore}`;
                         }
                     });
                 }
-                
-                    resetScore();
+                // resetScore();
+                countDownToStart(countDownStart, () => {
+                    countDownFinished = true;
+                    countDownToEnd(timeOfGame, resetFinished);
+                });
 
-                    countDownToStart(2, () => {
-                        countDownFinished = true;
-                        countDownToEnd(5, resetFinished);
-                    });
-        
             } else {
                 return console.log('Missing one or more flipCards: firstCard? secondCard? ThirdCard?');
             }
@@ -104,7 +100,7 @@ export const flipCardInOrder = () => {
 
 
     const countDownToStart = (countStart, callback) => {
-        let timerOnScreen = document.getElementById('countDownStartTimer');
+        let timerOnScreen = document.getElementById('startTimer');
         startFlipcardGameBtn.disabled = true;
 
         const timer = setInterval(() => {
@@ -112,7 +108,7 @@ export const flipCardInOrder = () => {
             timerOnScreen.style.opacity = '1';
             timerOnScreen.textContent = countStart;
 
-            if (countStart <= 0) {
+            if (countStart <= 1) {
                 clearInterval(timer);
                 timerOnScreen.style.opacity = '0';
                 timerOnScreen.textContent = 'Go!';
@@ -126,6 +122,7 @@ export const flipCardInOrder = () => {
     };
 
     const countDownToEnd = (countEnd, cb) => {
+        console.timeEnd()
         let timerElement = document.getElementById('timer');
         let startFlipcardGameBtn = document.getElementById('startFlipcardGameBtn');
 
