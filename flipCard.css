@@ -65,8 +65,8 @@
 .scoreBox {
     display: flex;
     flex-direction: column;
-    height: 120px;
-    width: 120px;
+    height: 130px;
+    width: 200px;
     margin-right: auto;
     margin-left: auto;
     margin-top: 20px;
@@ -81,7 +81,7 @@
 
 .scoreboardHeading {
     margin: 0;
-    margin-bottom: 5px auto;
+    margin-bottom: 10px;
 
 }
 
@@ -89,8 +89,14 @@
 .score {
     text-align: left;
     margin-left: 2px;
-    margin-bottom: 2px;
-    border-bottom: 1px dashed rgba(0, 0, 0);
+    margin-bottom: 8px;
+    border: solid;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-image-source: linear-gradient(rgba(113, 209, 34, 0.7), rgba(209, 130, 34, 1), rgba(113, 209, 34, 0.7));
+    border-image-slice: 1;
+    border-width: 1px;
 }
 
 .startFlipcardGameBtn {
