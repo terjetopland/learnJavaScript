@@ -138,14 +138,20 @@
     opacity: 0;
 }
 
+.gameOver {
+    position: absolute;
+    top: 400px;
+    opacity: 0;
+}
+
 @media (min-width: 1000px) {
-    .score.congratsAfter {
+    .score.congratsAfter, .gameOver.congratsAfter {
         animation-name: congratsAni;
         animation-duration: 5s;
         animation-delay: 1s;
         animation-iteration-count: 2;
         animation-direction: alternate;
-        white-space: nowrap;
+        white-space: nowrap; 
     }
 }
 
@@ -177,9 +183,12 @@
 
 @keyframes congratsAniSmall {
     0% {
+        opacity: 1;
+        transform: opactiy .5s;
     }
 
     50% {
+        opacity: 1;
         border: none;
         color: rgba(34, 113, 209, 1);
         text-shadow: -20px 10px 20px rgba(209, 130, 34, 1);

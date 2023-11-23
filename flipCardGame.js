@@ -8,9 +8,10 @@ export const flipCardInOrder = () => {
     let secondCard = document.getElementById('secondCard');
     let thirdCard = document.getElementById('thirdCard');
     let scoreStats = document.getElementById('score');
+    let gameOver = document.getElementById('gameOver');
         
 
-        let timeOfGame = 3;
+        let timeOfGame = 10;
         let countDownStart = 3;
         let countDownFinished = false;
 
@@ -18,11 +19,14 @@ export const flipCardInOrder = () => {
             countDownFinished = false;
             countScore = 0;
             scoreStats.textContent = `Score: ${countScore}`;
+            scoreStats.classList.remove('congratsAfter');
+            gameOver.classList.remove('congratsAfter');
         };
 
         const resetFinished = () => {
             countDownFinished = false;
             scoreStats.classList.add('congratsAfter');
+            gameOver.classList.add('congratsAfter');
         }
 
         if (firstCard) {
