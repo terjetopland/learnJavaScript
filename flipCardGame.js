@@ -3,14 +3,14 @@ export const flipCardInOrder = () => {
     let countScore = 0;
 
     document.addEventListener('DOMContentLoaded', () => {
-        let startFlipcardGameBtn = document.getElementById('startFlipcardGameBtn');
-        let firstCard = document.getElementById('firstCard');
-        let secondCard = document.getElementById('secondCard');
-        let thirdCard = document.getElementById('thirdCard');
-        let scoreStats = document.getElementById('score');
-        let congratsElement = document.querySelector('.congrats');
+    let startFlipcardGameBtn = document.getElementById('startFlipcardGameBtn');
+    let firstCard = document.getElementById('firstCard');
+    let secondCard = document.getElementById('secondCard');
+    let thirdCard = document.getElementById('thirdCard');
+    let scoreStats = document.getElementById('score');
+        
 
-        let timeOfGame = 10;
+        let timeOfGame = 3;
         let countDownStart = 3;
         let countDownFinished = false;
 
@@ -22,6 +22,7 @@ export const flipCardInOrder = () => {
 
         const resetFinished = () => {
             countDownFinished = false;
+            scoreStats.classList.add('congratsAfter');
         }
 
         if (firstCard) {
@@ -109,7 +110,7 @@ export const flipCardInOrder = () => {
             timerOnScreen.style.opacity = '1';
             timerOnScreen.textContent = countStart;
 
-            if (countStart <= 1) {
+            if (countStart <= 0) {
                 clearInterval(timer);
                 timerOnScreen.style.opacity = '0';
                 timerOnScreen.textContent = 'Go!';
@@ -133,8 +134,9 @@ export const flipCardInOrder = () => {
                 clearInterval(timer);
                 timerElement.textContent = `Timer: 0`;
                 startFlipcardGameBtn.disabled = false;
+                
                 cb();
-                congratsElement.classList.add('congratsAfter');
+                
             }
             countEnd--;
         }, 1000);
