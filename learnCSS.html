@@ -5,10 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="https://kit.fontawesome.com/85743e3a7a.js" crossorigin="anonymous"></script>
-    <!--Impor this one first to make navbar come first-->
     <script defer type="module" src="./main.js"></script> <!--then the rest of the page-->
     <link rel="stylesheet" type="text/css" href="./styles.css" /> <!--Stylesheet import-->
-    <link rel="stylesheet" type="text/css" href="./navStyles.css">
     <title>Learn javaScript</title>
 </head>
 
@@ -17,7 +15,7 @@
         <div class="logo"><i class="fa-solid fa-chalkboard-user fa-2x"></i><span>Keep learning</span></div>
         <ul class="menu">
             <div class="layerContainer">
-                <li ><a href="./index.html">Home</a></li>
+                <li><a href="./index.html">Home</a></li>
                 <li class="backgroundNav">Home</li>
             </div>
             <div class="layerContainer">
@@ -51,6 +49,61 @@
             <div class="boxOfTextContent">
                 <div>Let's dive straight into it.</div>
                 <!-- <div>jeg er kulerer enn pappa</div> -->
+            </div>
+        </section>
+
+        
+        <section class="flipGame">
+            <div class="scoreContainer">
+                <div class="scoreBox coloredBorder">
+                    <button id="startFlipcardGameBtn" class="startFlipcardGameBtn">Start</button>
+                    <div id="gameOver" class="gameOver">Game Over!</div>
+                    <h3 class="scoreboardHeading">ScoreBoard</h3>
+                    <div id="timer" class="timer greenBottomBorder">Timer: 0</div>
+                    <div id="score" class="score greenBottomBorder">Score: 0</div>
+                </div>
+                <div id="startTimer" class="startTimer">i</div>
+            </div>
+            <div class="flipContainer">
+                <div id="secondCard" class="flipCard secondCard">
+                    <div class="flipCardInnerContainer">
+                        <div class="flipCardFront evenSection">
+                            <h2>Front secondCard</h2>
+                            <div>Hover me and check out what's going on.</div>
+                        </div>
+                        <div class="flipCardBack oddSection">
+                            <h2>Back</h2>
+                            <div>YEAH! You flipped the card by hover me!</div>
+                            <div>Click me and I'm gone.</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="firstCard" class="flipCard firstCard">
+                    <div class="flipCardInnerContainer">
+                        <div class="flipCardFront evenSection">
+                            <h2>Front firstCard</h2>
+                            <div>Hover me and check out what's going on.</div>
+                        </div>
+                        <div class="flipCardBack oddSection">
+                            <h2>Back</h2>
+                            <div>YEAH! You flipped the card by hover me!</div>
+                            <div>Click start, then click me and I'm gone.</div>
+                        </div>
+                    </div>
+                </div>
+                <div id="thirdCard" class="flipCard thirdCard">
+                    <div class="flipCardInnerContainer">
+                        <div class="flipCardFront evenSection">
+                            <h2>Front thirdCard</h2>
+                            <div>Hover me and check out what's going on.</div>
+                        </div>
+                        <div class="flipCardBack oddSection">
+                            <h2>Back</h2>
+                            <div>YEAH! You flipped the card by hover me!</div>
+                            <div>Click me and I'm gone.</div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
         <div class="backArrowContainer">

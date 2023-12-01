@@ -1,4 +1,5 @@
 import { formUserNameHandler } from "./javaScriptFunctions/split.js";
+import { flipCardInOrder } from "./flipCardGame.js";
 
 const formUserName = document.getElementById('formUserName');
 
@@ -8,6 +9,11 @@ if (formUserName) {
         formUserNameHandler(eventObject);
     })
 }
+
+// It's to make the cards disappear and have clickable event.
+flipCardInOrder();
+
+
 
 // some styling isn't to easy to solve with plain css. Hence this is provided.
 document.addEventListener('DOMContentLoaded', () => {
@@ -40,5 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+
 
 

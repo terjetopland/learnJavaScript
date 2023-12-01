@@ -1,0 +1,199 @@
+.flipContainer {
+    display: flex;
+    position: relative;
+}
+
+.flipCard {
+    background-color: transparent;
+    max-width: 100%;
+    width: 200px;
+    height: 300px;
+    perspective: 800px;
+    margin: 20px auto;
+}
+
+.flipCardInnerContainer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.flipCard:hover .flipCardInnerContainer {
+    transform: rotateX(180deg);
+}
+
+.flipCardFront,
+.flipCardBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid rgba(0, 0, 0);
+    box-shadow: -10px 10px 20px rgba(209, 130, 34, 0.6);
+}
+
+.flipCardFront {}
+
+
+.flipCardBack {
+    transform: rotateX(180deg);
+}
+
+
+
+
+.flipGame {}
+
+.firstCard,
+.secondCard,
+.thirdCard {
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    /* IE 10 and IE 11 */
+    opacity: 0;
+    transition: opacity 3s;
+}
+
+.scoreContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.scoreBox {
+    display: flex;
+    flex-direction: column;
+    height: 130px;
+    width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+}
+
+.coloredBorder {
+    border: 2px solid;
+    border-image-source: linear-gradient(rgba(113, 209, 34, 0.7), rgba(209, 130, 34, 1), rgba(113, 209, 34, 0.7));
+    border-image-slice: 1;
+    border-width: 3px;
+}
+
+.scoreboardHeading {
+    margin: 0;
+    margin-bottom: 10px;
+
+}
+
+
+
+.timer,
+.score {
+    text-align: left;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-bottom: 8px;
+    
+}
+
+.greenBottomBorder {
+    border: solid;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-image-source: linear-gradient(rgba(113, 209, 34, 0.7), rgba(209, 130, 34, 1), rgba(113, 209, 34, 0.7));
+    border-image-slice: 1;
+    border-width: 1px; 
+}
+
+.startFlipcardGameBtn {
+    background: rgba(34, 113, 209, 0.7);
+    border: 5px solid whitesmoke;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.startFlipcardGameBtn:disabled {
+    background: gainsboro;
+}
+
+.startFlipcardGameBtn:hover {
+    background: rgba(209, 130, 34, 1);
+}
+
+.startTimer {
+    color: rgba(34, 113, 209, 1);
+    font-size: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    opacity: 0;
+}
+
+.gameOver {
+    position: absolute;
+    top: 400px;
+    opacity: 0;
+}
+
+@media (min-width: 1000px) {
+    .score.congratsAfter, .gameOver.congratsAfter {
+        animation-name: congratsAni;
+        animation-duration: 5s;
+        animation-delay: 1s;
+        animation-iteration-count: 2;
+        animation-direction: alternate;
+        white-space: nowrap; 
+    }
+}
+
+@keyframes congratsAni {
+    0% {
+    }
+
+    50% {
+        border: none;
+        transform: rotate(0) translateX(-13vw) translateY(-10vh);
+        color: rgba(34, 113, 209, 1);
+        text-shadow: -20px 10px 20px rgba(209, 130, 34, 1);
+        opacity: 1;
+        font-size: 10vw; 
+    }
+} 
+
+
+@media (max-width: 999px) {
+    .score.congratsAfter {
+        animation-name: congratsAniSmall;
+        animation-duration: 5s;
+        animation-delay: 1s;
+        animation-iteration-count: 2;
+        animation-direction: alternate;
+        white-space: nowrap;
+    }
+}
+
+@keyframes congratsAniSmall {
+    0% {
+        opacity: 1;
+        transform: opactiy .5s;
+    }
+
+    50% {
+        opacity: 1;
+        border: none;
+        color: rgba(34, 113, 209, 1);
+        text-shadow: -20px 10px 20px rgba(209, 130, 34, 1);
+        margin-left: 10px;
+        opacity: 1;
+        font-size: 20px; 
+    }
+}
