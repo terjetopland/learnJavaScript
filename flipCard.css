@@ -146,7 +146,7 @@
 
 @media (min-width: 1000px) {
     .score.congratsAfter, .gameOver.congratsAfter {
-        animation-name: congratsAni;
+        animation-name: gameOverAni;
         animation-duration: 5s;
         animation-delay: 1s;
         animation-iteration-count: 2;
@@ -155,7 +155,7 @@
     }
 }
 
-@keyframes congratsAni {
+@keyframes gameOverAni {
     0% {
     }
 
@@ -172,7 +172,7 @@
 
 @media (max-width: 999px) {
     .score.congratsAfter {
-        animation-name: congratsAniSmall;
+        animation-name: gameOverAniSmall;
         animation-duration: 5s;
         animation-delay: 1s;
         animation-iteration-count: 2;
@@ -181,7 +181,7 @@
     }
 }
 
-@keyframes congratsAniSmall {
+@keyframes gameOverAniSmall {
     0% {
         opacity: 1;
         transform: opactiy .5s;

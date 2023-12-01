@@ -1,15 +1,20 @@
 export const flipCardInOrder = () => {
-    
+
     let countScore = 0;
 
     document.addEventListener('DOMContentLoaded', () => {
-    let startFlipcardGameBtn = document.getElementById('startFlipcardGameBtn');
-    let firstCard = document.getElementById('firstCard');
-    let secondCard = document.getElementById('secondCard');
-    let thirdCard = document.getElementById('thirdCard');
-    let scoreStats = document.getElementById('score');
-    let gameOver = document.getElementById('gameOver');
-        
+        let startFlipcardGameBtn = document.getElementById('startFlipcardGameBtn');
+        let firstCard = document.getElementById('firstCard');
+        let secondCard = document.getElementById('secondCard');
+        let thirdCard = document.getElementById('thirdCard');
+        let scoreStats = document.getElementById('score');
+        let gameOver = document.getElementById('gameOver');
+
+        // Will make a list to randomize which card appears
+        let allCards = [firstCard, secondCard, thirdCard];
+        const randomCard = Math.floor(Math.random() * allCards.length);
+        console.log(allCards[randomCard])
+
 
         let timeOfGame = 10;
         let countDownStart = 3;
@@ -138,9 +143,9 @@ export const flipCardInOrder = () => {
                 clearInterval(timer);
                 timerElement.textContent = `Timer: 0`;
                 startFlipcardGameBtn.disabled = false;
-                
+
                 cb();
-                
+
             }
             countEnd--;
         }, 1000);
