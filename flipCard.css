@@ -142,6 +142,8 @@
     position: absolute;
     top: 400px;
     opacity: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 @media (min-width: 1000px) {
@@ -152,7 +154,7 @@
         animation-iteration-count: 2;
         animation-direction: alternate;
         white-space: nowrap; 
-    }
+    } 
 }
 
 @keyframes gameOverAni {
@@ -161,7 +163,7 @@
 
     50% {
         border: none;
-        transform: rotate(0) translateX(-13vw) translateY(-10vh);
+        transform: rotate(0) translateX(-50%) translateY(-10vh);
         color: rgba(34, 113, 209, 1);
         text-shadow: -20px 10px 20px rgba(209, 130, 34, 1);
         opacity: 1;

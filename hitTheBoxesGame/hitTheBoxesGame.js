@@ -2,18 +2,24 @@ export const hitTheBoxesGame = () => {
 
     let countScore = 0;
 
-    // function to make random integer
-    function getRandomInt(min, max) {
-        return Math.floor(Math.random() * (max - min + 1));
-    }
-
     document.addEventListener('DOMContentLoaded', () => {
         let startHitTheBoxBtn = document.getElementById('startHitTheBoxBtn');
         let scoreStats = document.getElementById('score');
         let gameOver = document.getElementById('gameOver');
-
-        let hitTheBoxesGame = document.getElementById('hitTheBoxGame');
         let boxOne = document.getElementById('one');
+        let hitTheBoxGame = document.getElementById('hitTheBoxGame');
+
+
+        if (boxOne) {
+            boxOne.style.opacity = 1;
+        }
+
+        let gameboardWidth;
+        let gameboardHeight;
+        if (hitTheBoxGame) {
+            gameboardWidth = hitTheBoxGame.offsetWidth;
+            gameboardHeight = hitTheBoxGame.offsetHeight;
+        }
 
 
 
@@ -25,37 +31,49 @@ export const hitTheBoxesGame = () => {
             countDownFinished = false;
             countScore = 0;
             scoreStats.textContent = `Score: ${countScore}`;
-            scoreStats.classList.remove('congratsAfter');
+            boxOne.classList.remove('boxOneGameFinished');
             gameOver.classList.remove('congratsAfter');
+            boxOne.innerText = ``;
+            console.log(countScore);
         };
 
         const resetFinished = () => {
             countDownFinished = false;
-            scoreStats.classList.add('congratsAfter');
             gameOver.classList.add('congratsAfter');
+            boxOne.classList.add('boxOneGameFinished');
+            boxOne.innerText = `${countScore}`
         }
 
+        if (startHitTheBoxBtn) {
 
-        startHitTheBoxBtn.addEventListener('click', () => {
-
-            resetScore();
-
-            
-                boxOne.addEventListener('click', () => {
-                    if(countDownFinished) {
-                        scoreStats.textContent = `Score: ${++countScore}`
-                    }                    
-                })
-
-            
-
-            // resetScore();
-            countDownToStart(countDownStart, () => {
-                countDownFinished = true;
-                countDownToEnd(timeOfGame, resetFinished);
+            startHitTheBoxBtn.addEventListener('click', () => {
+                resetScore();
+                countDownToStart(countDownStart, () => {
+                    countDownFinished = true;
+                    countDownToEnd(timeOfGame, resetFinished);
+                });
             });
-        });
-    })
+
+            if (boxOne) {
+
+                boxOne.addEventListener('click', () => {
+                    if (countDownFinished) {
+                        let randomLeft = getRandomInt(10, gameboardWidth-200);
+                        let randomTop = getRandomInt(10, gameboardHeight-100);
+                        let randomSize = getRandomInt(10, gameboardHeight-400)
+
+                        scoreStats.textContent = `Score: ${++countScore}`;
+                        boxOne.style.left = `${randomLeft}px`;
+                        boxOne.style.top = `${randomTop}px`;
+                        boxOne.style.width = `${randomSize}px`;
+                        boxOne.style.height = `${randomSize}px`;
+
+                    }
+                });
+
+            }
+        }
+    });
 
 
     const countDownToStart = (countStart, callback) => {
@@ -81,7 +99,6 @@ export const hitTheBoxesGame = () => {
     };
 
     const countDownToEnd = (countEnd, cb) => {
-        console.timeEnd()
         let timerElement = document.getElementById('timer');
         let startHitTheBoxBtn = document.getElementById('startHitTheBoxBtn');
 
@@ -99,6 +116,10 @@ export const hitTheBoxesGame = () => {
         }, 1000);
     }
 
+    // function to make random integer
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
 
 }
 
