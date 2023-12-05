@@ -10,11 +10,6 @@ export const flipCardInOrder = () => {
         let scoreStats = document.getElementById('score');
         let gameOver = document.getElementById('gameOver');
 
-        // Will make a list to randomize which card appears
-        let allCards = [firstCard, secondCard, thirdCard];
-        const randomCard = Math.floor(Math.random() * allCards.length);
-        console.log(allCards[randomCard])
-
 
         let timeOfGame = 10;
         let countDownStart = 3;
@@ -39,6 +34,7 @@ export const flipCardInOrder = () => {
             firstCard.style.cursor = 'pointer';
         }
 
+        if(startFlipcardGameBtn){
         startFlipcardGameBtn.addEventListener('click', () => {
             console.time();
 
@@ -107,6 +103,7 @@ export const flipCardInOrder = () => {
                 return console.log('Missing one or more flipCards: firstCard? secondCard? ThirdCard?');
             }
         });
+    }
     })
 
 

@@ -1,0 +1,43 @@
+.startHitTheBoxBtn {
+    background: rgba(34, 113, 209, 0.7);
+    border: 5px solid whitesmoke;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.startHitTheBoxBtn:disabled, .startHitTheBoxBtn:disabled:hover {
+    background: gainsboro;
+}
+
+.startHitTheBoxBtn:hover {
+    background: rgba(209, 130, 34, 1);
+}
+
+.hitTheBoxGame {
+    position: relative;
+    display: flex;
+    width: 90%;
+    height: 500px;
+    border: solid rgba(113, 209, 34, 0.7) 2px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.box {
+    position: absolute;
+}
+
+.box#one {
+    width: 20px;
+    height: 20px;
+    background: red;
+
+    top: 200px;
+    left: 100px;
+}
