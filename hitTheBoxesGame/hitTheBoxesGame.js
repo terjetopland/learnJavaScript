@@ -1,4 +1,4 @@
-export const hitTheBoxesGame = () => {
+export const hitTheBoxesGame = (timeOfGame = 10) => {
 
     let countScore = 0;
 
@@ -21,9 +21,6 @@ export const hitTheBoxesGame = () => {
             gameboardHeight = hitTheBoxGame.offsetHeight;
         }
 
-
-
-        let timeOfGame = 10;
         let countDownStart = 3;
         let countDownFinished = false;
 

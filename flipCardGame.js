@@ -1,4 +1,4 @@
-export const flipCardInOrder = () => {
+export const flipCardInOrder = (timeOfGame = 10) => {
 
     let countScore = 0;
 
@@ -11,7 +11,6 @@ export const flipCardInOrder = () => {
         let gameOver = document.getElementById('gameOver');
 
 
-        let timeOfGame = 10;
         let countDownStart = 3;
         let countDownFinished = false;
 
