@@ -13,7 +13,7 @@ if (formUserName) {
 
 // It's to make the cards disappear and have clickable event.
 flipCardInOrder();
-hitTheBoxesGame();
+hitTheBoxesGame(20);
 
 
 
