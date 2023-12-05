@@ -1,0 +1,108 @@
+.startHitTheBoxBtn {
+    background: rgba(34, 113, 209, 0.7);
+    border: 5px solid whitesmoke;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.startHitTheBoxBtn:disabled,
+.startHitTheBoxBtn:disabled:hover {
+    background: gainsboro;
+}
+
+.startHitTheBoxBtn:hover {
+    background: rgba(209, 130, 34, 1);
+}
+
+.hitTheBoxGame {
+    position: relative;
+    display: flex;
+    width: 90%;
+    height: 500px;
+    border: solid rgba(113, 209, 34, 0.7) 2px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.box {
+    position: absolute;
+}
+
+.box:hover {
+    cursor: pointer;
+    animation: borderFadeIn 1s infinite;
+}
+
+@keyframes borderFadeIn {
+    0% {
+        box-shadow: 2px 4px 30px rgba(209, 130, 34, 1);
+    }
+
+    25% {
+        border: rgb(113, 209, 34) solid 2px;
+        border-radius: 17%;
+    }
+
+    50% {
+        border: rgb(113, 209, 34) solid 2px;
+        border-radius: 34%;
+    }
+
+    75% {
+        border: rgba(34, 113, 209, 0.5) solid 2px;
+        border-radius: 50%;
+    }
+
+    100% {
+        border: rgba(34, 113, 209, 0.7) solid 2px;
+        border-radius: 50%;
+        background: rgba(34, 113, 209, 1);
+    }
+}
+
+.box#one {
+    width: 20px;
+    height: 20px;
+    background: rgb(113, 209, 34);
+    /* opacity: 0; */
+
+    left: 49.2%;
+    top: 50%;
+    transform: opacity .4s;
+}
+
+
+.boxOneGameFinished {
+    animation: ball 5s forwards;
+    pointer-events: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 8px;
+    
+ 
+}
+
+@keyframes ball {
+    from {}
+
+    to {
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%);
+        width: 200px;
+        height: 200px;
+        border: rgb(113, 209, 34) solid 2px;
+        border-radius: 50%;
+        box-shadow: 2px 4px 30px rgba(209, 130, 34, 1);
+        font-size: 80px;
+    }
+}

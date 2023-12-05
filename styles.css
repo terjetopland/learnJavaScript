@@ -1,5 +1,7 @@
 @import "/navStyles.css";
 @import "flipCard.css";
+@import "/hitTheBoxesGame/hitTheBoxesGame.css";
+
 
 * {
     box-sizing: border-box;
