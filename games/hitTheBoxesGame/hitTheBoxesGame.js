@@ -29,14 +29,14 @@ export const hitTheBoxesGame = (timeOfGame = 10) => {
             countScore = 0;
             scoreStats.textContent = `Score: ${countScore}`;
             boxOne.classList.remove('boxOneGameFinished');
-            gameOver.classList.remove('congratsAfter');
+            gameOver.classList.remove('scoreboard-congratsAfter');
             boxOne.innerText = ``;
             console.log(countScore);
         };
 
         const resetFinished = () => {
             countDownFinished = false;
-            gameOver.classList.add('congratsAfter');
+            gameOver.classList.add('scoreboard-congratsAfter');
             boxOne.classList.add('boxOneGameFinished');
             boxOne.innerText = `${countScore}`
         }

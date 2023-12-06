@@ -1,6 +1,6 @@
 import { formUserNameHandler } from "./javaScriptFunctions/split.js";
-import { flipCardInOrder } from "./flipCardGame.js";
-import { hitTheBoxesGame } from "./hitTheBoxesGame/hitTheBoxesGame.js";
+import { flipCardInOrder } from "./games/flipCardGame/flipCardGame.js";
+import { hitTheBoxesGame } from "./games/hitTheBoxesGame/hitTheBoxesGame.js";
 
 const formUserName = document.getElementById('formUserName');
 

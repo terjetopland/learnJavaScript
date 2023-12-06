@@ -1,23 +1,4 @@
-.startHitTheBoxBtn {
-    background: rgba(34, 113, 209, 0.7);
-    border: 5px solid whitesmoke;
-    border-radius: 10px;
-    color: white;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
-.startHitTheBoxBtn:disabled,
-.startHitTheBoxBtn:disabled:hover {
-    background: gainsboro;
-}
-
-.startHitTheBoxBtn:hover {
-    background: rgba(209, 130, 34, 1);
-}
+@import "./../scoreboard.css";
 
 .hitTheBoxGame {
     position: relative;

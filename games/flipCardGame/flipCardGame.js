@@ -18,14 +18,14 @@ export const flipCardInOrder = (timeOfGame = 10) => {
             countDownFinished = false;
             countScore = 0;
             scoreStats.textContent = `Score: ${countScore}`;
-            scoreStats.classList.remove('congratsAfter');
-            gameOver.classList.remove('congratsAfter');
+            scoreStats.classList.remove('scoreboard-congratsAfter');
+            gameOver.classList.remove('scoreboard-congratsAfter');
         };
 
         const resetFinished = () => {
             countDownFinished = false;
-            scoreStats.classList.add('congratsAfter');
-            gameOver.classList.add('congratsAfter');
+            scoreStats.classList.add('scoreboard-congratsAfter');
+            gameOver.classList.add('scoreboard-congratsAfter');
         }
 
         if (firstCard) {

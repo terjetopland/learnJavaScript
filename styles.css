@@ -1,6 +1,6 @@
 @import "/navStyles.css";
-@import "flipCard.css";
-@import "/hitTheBoxesGame/hitTheBoxesGame.css";
+@import "/games/flipCardGame/flipCardGame.css";
+@import "/games/hitTheBoxesGame/hitTheBoxesGame.css";
 
 
 * {
