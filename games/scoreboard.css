@@ -28,15 +28,12 @@
 
 }
 
-
-
 .scoreboard-timer,
 .scoreboard-score {
     text-align: left;
     margin-left: 2px;
     margin-right: 2px;
     margin-bottom: 8px;
-    
 }
 
 .scoreboard-greenBottomBorder {

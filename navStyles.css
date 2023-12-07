@@ -22,7 +22,7 @@
     margin-right: 20px;
 }
 
-.backgroundNav {
+.backgroundAniBefore {
     position: absolute;
     top: 17px;
     right: 50%;
@@ -51,8 +51,8 @@
 }
 
 @media (min-width: 1000px) {
-    .navBar .menu li:hover+.backgroundNav {
-        animation-name: slideInBackgroundNav;
+    .navBar .menu li:hover+.backgroundAniBefore {
+        animation-name: slideInBackgroundAniBefore;
         animation-duration: 3s;
         animation-delay: 1s;
         animation-iteration-count: 2;
@@ -60,7 +60,7 @@
     }
 }
 
-@keyframes slideInBackgroundNav {
+@keyframes slideInBackgroundAniBefore {
     from {
         opacity: 0;
         font-size: 17px;
