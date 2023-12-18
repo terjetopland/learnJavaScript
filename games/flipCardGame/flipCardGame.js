@@ -7,8 +7,10 @@ export const flipCardInOrder = (timeOfGame = 10) => {
         let firstCard = document.getElementById('firstCard');
         let secondCard = document.getElementById('secondCard');
         let thirdCard = document.getElementById('thirdCard');
+        let scoreboard = document.getElementById('scoreboard-scoreContainer');
         let scoreStats = document.getElementById('score');
         let gameOver = document.getElementById('gameOver');
+
 
 
         let countDownStart = 3;
@@ -92,9 +94,9 @@ export const flipCardInOrder = (timeOfGame = 10) => {
                         });
                     }
                     // resetScore();
-                    countDownToStart(countDownStart, () => {
+                    countDownToStart(countDownStart, scoreboard.id, startFlipcardGameBtn, () => {
                         countDownFinished = true;
-                        countDownToEnd(timeOfGame, resetFinished);
+                        countDownToEnd(timeOfGame, 'timer', 'startFlipcardGameBtn', resetFinished);
                     });
 
                 } else {
@@ -105,38 +107,51 @@ export const flipCardInOrder = (timeOfGame = 10) => {
     })
 
 
-    const countDownToStart = (countStart, callback) => {
-        let timerOnScreen = document.getElementById('startTimer');
-        startFlipcardGameBtn.disabled = true;
-
-        const timer = setInterval(() => {
-            timerOnScreen.style.transition = 'opacity 0.1s'
-            timerOnScreen.style.opacity = '1';
-            timerOnScreen.textContent = countStart;
-
-            if (countStart <= 0) {
-                clearInterval(timer);
-                timerOnScreen.style.opacity = '0';
-                timerOnScreen.textContent = 'Go!';
-                timerOnScreen.style.transition = 'opacity 2s';
-                if (callback) {
-                    callback();
-                }
+    const countDownToStart = (countDownToStart = 3, parentElementId, startBtn, callback) => {
+        console.log('here')
+            
+            const parentElement = document.getElementById(parentElementId);
+            if (!parentElement) {
+                console.error(`Couldn't find parent element with id ${parentElementId} when using countDownToStart function!!`);
             }
-            countStart--;
-        }, 1000);
+
+            const timerOnScreen = document.createElement("div");
+            timerOnScreen.id = 'startTimer';
+            timerOnScreen.classList.add('scoreboard-startTimer');
+            parentElement.appendChild(timerOnScreen);
+            console.log(timerOnScreen)
+
+            startBtn.disabled = true;
+
+            const timer = setInterval(() => {
+                timerOnScreen.style.transition = 'opacity 0.1s'
+                timerOnScreen.style.opacity = '1';
+                timerOnScreen.textContent = countDownToStart;
+
+                if (countDownToStart <= 0) {
+                    clearInterval(timer);
+                    timerOnScreen.style.opacity = '0';
+                    timerOnScreen.textContent = 'Go!';
+                    timerOnScreen.style.transition = 'opacity 2s';
+                    if (callback) {
+                        callback();
+                    }
+                }
+                countDownToStart--;
+            }, 1000);
+        
     };
 
-    const countDownToEnd = (countEnd, cb) => {
-        let timerElement = document.getElementById('timer');
-        let startFlipcardGameBtn = document.getElementById('startFlipcardGameBtn');
+    const countDownToEnd = (countEnd = '10', timerElementId = 'timer', startGameBtnId = 'startGame', cb) => {
+        let timerElement = document.getElementById(timerElementId);
+        let startGameBtn = document.getElementById(startGameBtnId);
 
         const timer = setInterval(() => {
             timerElement.textContent = `Timer: ${countEnd}`;
             if (countEnd <= 0) {
                 clearInterval(timer);
                 timerElement.textContent = `Timer: 0`;
-                startFlipcardGameBtn.disabled = false;
+                startGameBtn.disabled = false;
 
                 cb();
 
