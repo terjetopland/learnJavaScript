@@ -85,7 +85,7 @@
     display: none;
 }
 
-/* Make hamburgermenu if it under a certain screen width */
+/* Make hamburgermenu if it is under a certain screen width */
 @media (max-width: 560px) {
     .navBar .checkBtn {
         display: block;
