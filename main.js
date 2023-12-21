@@ -1,6 +1,7 @@
 import { formUserNameHandler } from "./javaScriptFunctions/split.js";
 import { flipCardInOrder } from "./games/flipCardGame/flipCardGame.js";
 import { hitTheBoxesGame } from "./games/hitTheBoxesGame/hitTheBoxesGame.js";
+import { howToProxy } from "./conceptsJS/howToProxy.js";
 
 const formUserName = document.getElementById('formUserName');
 
@@ -13,6 +14,10 @@ if (formUserName) {
 
 flipCardInOrder();
 hitTheBoxesGame(20);
+
+// Figuring out proxies
+howToProxy();
+
 
 
 
